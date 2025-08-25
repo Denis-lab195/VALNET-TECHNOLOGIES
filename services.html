@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services – Valnet Technologies</title>
+
+  <!-- Tailwind & Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50:'#eef7ff',100:'#d9ecff',200:'#b9dbff',300:'#8dc3ff',400:'#5aa5ff',500:'#2b86ff',600:'#156af0',700:'#1558c9',800:'#144aa3',900:'#0f3c83' },
+            accent: { 50:'#fff7ed',100:'#ffedd5',200:'#fed7aa',300:'#fdba74',400:'#fb923c',500:'#f97316',600:'#ea580c',700:'#c2410c',800:'#9a3412',900:'#7c2d12' }
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    .glass{background:rgba(255,255,255,.85);backdrop-filter:blur(10px)}
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+  <!-- Top strip -->
+  <div class="w-full bg-accent-600 text-white text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <span class="font-semibold">Cyber Services made easier</span>
+      <a href="tel:0780003131" class="font-bold tracking-wide hover:underline">
+        <i class="fa-solid fa-phone mr-2"></i> Call 0780003131
+      </a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-6">
+      <a href="index.html" class="text-xl font-extrabold tracking-tight">
+        Valnet<span class="text-primary-600">Tech</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-4 text-sm">
+        <li><a href="index.html" class="px-3 py-2 rounded-lg hover:bg-primary-50">Home</a></li>
+        <li><a href="about.html" class="px-3 py-2 rounded-lg hover:bg-primary-50">About</a></li>
+        <li><a href="services.html" class="px-3 py-2 rounded-lg bg-primary-50 text-primary-700 font-semibold">Services</a></li>
+        <li><a href="events.html" class="px-3 py-2 rounded-lg hover:bg-primary-50">Events</a></li>
+        <li><a href="contact.html" class="px-3 py-2 rounded-lg hover:bg-primary-50">Contact</a></li>
+      </ul>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="tel:0780003131" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-primary-600 text-white text-sm hover:bg-primary-700">
+          <i class="fa-solid fa-phone"></i> 0780003131
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+          One place for all your <span class="text-primary-600">eCitizen, KRA, NTSA, HELB/HEF</span> & cyber needs
+        </h1>
+        <p class="mt-3 text-slate-600">Fast assistance for tax, licensing, education, business, typing/design and more. No login required—request online and we handle the rest.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#quick-links" class="px-4 py-3 rounded-xl bg-primary-600 text-white text-sm font-semibold hover:bg-primary-700">
+            Browse Quick Links
+          </a>
+          <a href="contact.html" class="px-4 py-3 rounded-xl border text-sm font-semibold hover:bg-white">
+            Talk to an Agent
+          </a>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-5 shadow border">
+        <div class="grid grid-cols-3 gap-4 text-center">
+          <div class="p-4 rounded-xl bg-primary-50">
+            <div class="text-2xl font-extrabold text-primary-700">50+</div>
+            <div class="text-xs text-slate-600">Cyber Services</div>
+          </div>
+          <div class="p-4 rounded-xl bg-primary-50">
+            <div class="text-2xl font-extrabold text-primary-700">10k+</div>
+            <div class="text-xs text-slate-600">Clients Served</div>
+          </div>
+          <div class="p-4 rounded-xl bg-primary-50">
+            <div class="text-2xl font-extrabold text-primary-700">&lt;1hr</div>
+            <div class="text-xs text-slate-600">Avg. Response</div>
+          </div>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Call, WhatsApp or submit online. We confirm, process and deliver by your preferred channel.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Search + Filters -->
+  <section class="max-w-7xl mx-auto px-4">
+    <div class="bg-white rounded-2xl shadow border p-4 md:p-6">
+      <div class="flex flex-col md:flex-row gap-3 items-stretch">
+        <div class="relative flex-1">
+          <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+          <input id="search" class="w-full pl-10 pr-4 py-3 rounded-xl border focus:ring-2 focus:ring-primary-500 outline-none" placeholder="Search service e.g. KRA PIN, Smart DL, KUCCPS, Passport..." />
+        </div>
+        <div class="flex gap-2 overflow-x-auto">
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="all">All</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="kra">KRA / ETIMS</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="ecitizen">eCitizen / ID</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="ntsa">NTSA / DL</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="education">Education / HELB / KUCCPS</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="tsc">TSC</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="business">Business / BRS / AGPO</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="typing">Typing & Design</button>
+          <button class="filter-btn px-4 py-3 rounded-xl border text-sm font-semibold" data-filter="misc">Others</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <div id="servicesGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- ====== KRA / ETIMS ====== -->
+      <div class="svc card kra">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-file-invoice"></i></span>
+            <h3 class="font-bold text-lg">KRA Services</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>New KRA PIN Registration</li>
+            <li>Lost KRA PIN Retrieval</li>
+            <li>Change KRA Email</li>
+            <li>File KRA Returns</li>
+            <li>Tax Compliance Certificate</li>
+            <li>ETIMS Registration & Invoices</li>
+          </ul>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Request</a>
+            <a href="#" class="px-3 py-2 rounded-lg border text-xs font-semibold">Learn more</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="svc card kra">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-envelope"></i></span>
+            <h3 class="font-bold text-lg">Check KRA Email</h3>
+          </div>
+          <p class="mt-3 text-sm">Verify the email attached to your KRA PIN for easier password reset and tax filing.</p>
+          <div class="mt-auto pt-4">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Check Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== eCitizen / Identity ====== -->
+      <div class="svc card ecitizen">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-mobile-screen-button"></i></span>
+            <h3 class="font-bold text-lg">Change eCitizen Phone Number</h3>
+          </div>
+          <p class="mt-3 text-sm">Update your eCitizen account phone for secure access and OTP delivery.</p>
+          <div class="mt-auto pt-4">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Change Phone</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== NSSF / SHA ====== -->
+      <div class="svc card misc">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-id-card"></i></span>
+            <h3 class="font-bold text-lg">NSSF & SHA Services</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>NSSF Registration / Lost Card</li>
+            <li>SHA Registration & Payments (STK Push @ 20/=)</li>
+            <li>Change SHA / SHIF Phone Number</li>
+            <li>New SHIF Registration & Add Dependants</li>
+          </ul>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Start</a>
+            <a href="#" class="px-3 py-2 rounded-lg border text-xs font-semibold">Pricing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== NTSA ====== -->
+      <div class="svc card ntsa">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-car"></i></span>
+            <h3 class="font-bold text-lg">NTSA Services</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>Vehicle Transfer</li>
+            <li>Inspection Booking</li>
+            <li>Renew DL / Smart DL / Interim (PDL)</li>
+            <li>Test Booking</li>
+            <li>PSV & Road Service License</li>
+            <li>New Generation Plates</li>
+            <li>Vehicle Search</li>
+          </ul>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Book Now</a>
+            <a href="#" class="px-3 py-2 rounded-lg border text-xs font-semibold">How it works</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Passport / PCC / COVID ====== -->
+      <div class="svc card ecitizen">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-passport"></i></span>
+            <h3 class="font-bold text-lg">Passport & PCC</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>Passport Application & Tracking</li>
+            <li>Good Conduct / Police Clearance Certificate</li>
+            <li>Download COVID-19 Certificate</li>
+            <li>National Registration Bureau assistance</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Apply / Track</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Education: HELB / HEF / KUCCPS / TVET ====== -->
+      <div class="svc card education">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-graduation-cap"></i></span>
+            <h3 class="font-bold text-lg">HELB / HEF / KUCCPS</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>HELB & HEF Services (loan application, subsequent, troubleshooting)</li>
+            <li>HELB Clearance Certificate</li>
+            <li>KUCCPS Placement & Student Support</li>
+            <li>TVET Applications</li>
+            <li>Download Form 1 Admission Letters</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Get Help</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== TSC ====== -->
+      <div class="svc card tsc">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-chalkboard-user"></i></span>
+            <h3 class="font-bold text-lg">TSC Services</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>New Teacher Registration (TSC Number)</li>
+            <li>Wealth Declaration</li>
+            <li>Get Old Appraisal</li>
+            <li>TSC Promotions</li>
+            <li>Apply Sick Leave</li>
+            <li>Recruitment Guidance</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Start</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Business / BRS / AGPO ====== -->
+      <div class="svc card business">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-briefcase"></i></span>
+            <h3 class="font-bold text-lg">Business & BRS</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>Register a Business / Company</li>
+            <li>AGPO Application & Approval</li>
+            <li>NCPWD Registration</li>
+            <li>Church/Organization Registration</li>
+          </ul>
+          <div class="mt-4">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">Register</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Typing / Design / Photoshop ====== -->
+      <div class="svc card typing">
+        <div class="bg-white rounded-2xl shadow border p-5 h-full flex flex-col">
+          <div class="flex items-center gap-3">
+            <span class="h-10 w-10 grid place-items-center rounded-xl bg-primary-100 text-primary-700"><i class="fa-solid fa-keyboard"></i></span>
+            <h3 class="font-bold text-lg">Typing & Design</h3>
+          </div>
+          <ul class="mt-3 text-sm space-y-2 list-disc pl-5">
+            <li>Type-setting @ 40/= per page (MS Word / Excel)</li>
+            <li>Photoshop Requests</li>
+            <li>Metropol / Transunion / CRB</li>
+          </ul>
+          <div class="mt-4 flex gap-2">
+            <a href="#" class="px-3 py-2 rounded-lg bg-primary-600 text-white text-xs font-semibold">MS Word</a>
+            <a href="#" class="px-3 py-2 rounded-lg border text-xs font-semibold">MS Excel</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== Promo / Callouts ====== -->
+      <div class="svc card kra">
+        <div class="bg-gradient-to-br from-primary-600 to-primary-800 text-white rounded-2xl p-6 shadow border-0">
+          <h3 class="text-xl font-extrabold">Retrieve your Lost KRA PIN in minutes</h3>
+          <p class="mt-2 text-white/90">Quick turnaround. Secure process. Start now.</p>
+          <a href="#" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-primary-700 text-sm font-semibold">
+            Get KRA PIN <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="svc card ecitizen">
+        <div class="bg-white rounded-2xl shadow border p-6">
+          <h3 class="text-xl font-extrabold">Lost your eCitizen Phone?</h3>
+          <p class="mt-2 text-sm text-slate-600">Update now easily. We guide you step-by-step.</p>
+          <a href="#" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-600 text-white text-sm font-semibold">
+            Update Phone <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="svc card ntsa">
+        <div class="bg-white rounded-2xl shadow border p-6">
+          <h3 class="text-xl font-extrabold">Motor Vehicle Transfer Made Easy</h3>
+          <p class="mt-2 text-sm text-slate-600">We handle paperwork and follow-ups.</p>
+          <a href="#" class="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-primary-600 text-white text-sm font-semibold">
+            Start Transfer <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Partners -->
+  <section class="bg-white border-y">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <h3 class="text-center text-sm font-semibold text-slate-500 tracking-wide uppercase">Our Partners</h3>
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-6 grayscale">
+        <div class="h-12 bg-slate-100 rounded-xl"></div>
+        <div class="h-12 bg-slate-100 rounded-xl"></div>
+        <div class="h-12 bg-slate-100 rounded-xl"></div>
+        <div class="h-12 bg-slate-100 rounded-xl"></div>
+        <div class="h-12 bg-slate-100 rounded-xl"></div>
+        <div class="h-12 bg-slate-100 rounded-xl"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feedback -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="bg-primary-50 rounded-2xl p-6 border shadow-sm">
+      <h3 class="text-lg font-bold">Kindly rate and share your feedback</h3>
+      <p class="text-sm text-slate-600 mt-1">Your input helps us improve and provide even better experiences. Thank you!</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <a href="#" class="px-4 py-2 rounded-xl bg-primary-600 text-white text-sm font-semibold">Rate Service</a>
+        <a href="contact.html" class="px-4 py-2 rounded-xl border text-sm font-semibold">Send Feedback</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Links -->
+  <section id="quick-links" class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <h2 class="text-2xl font-extrabold mb-6">Quick Links</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- KRA -->
+        <div class="rounded-2xl border shadow-sm p-5">
+          <h4 class="font-bold text-primary-700">KRA Services</h4>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <a href="#" class="qlink">New KRA Pin</a>
+            <a href="#" class="qlink">Lost KRA Pin</a>
+            <a href="#" class="qlink">Change KRA Email</a>
+            <a href="#" class="qlink">Etims Registration</a>
+            <a href="#" class="qlink">Etims Invoices</a>
+            <a href="#" class="qlink">File Returns</a>
+            <a href="#" class="qlink">Tax Compliance Certificate</a>
+          </div>
+        </div>
+
+        <!-- NTSA -->
+        <div class="rounded-2xl border shadow-sm p-5">
+          <h4 class="font-bold text-primary-700">NTSA Services</h4>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <a href="#" class="qlink">Transfer</a>
+            <a href="#" class="qlink">New Number Plates</a>
+            <a href="#" class="qlink">DL Renewal</a>
+            <a href="#" class="qlink">Apply Smart DL</a>
+            <a href="#" class="qlink">Apply PDL/Interim</a>
+            <a href="#" class="qlink">Test Booking</a>
+          </div>
+        </div>
+
+        <!-- eCitizen -->
+        <div class="rounded-2xl border shadow-sm p-5">
+          <h4 class="font-bold text-primary-700">eCitizen Services</h4>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <a href="#" class="qlink">Account Creation</a>
+            <a href="#" class="qlink">Change Phone No.</a>
+            <a href="#" class="qlink">Good Conduct/PCC</a>
+            <a href="#" class="qlink">Passport Application</a>
+          </div>
+        </div>
+
+        <!-- TSC -->
+        <div class="rounded-2xl border shadow-sm p-5">
+          <h4 class="font-bold text-primary-700">TSC Services</h4>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <a href="#" class="qlink">New Teacher Registration</a>
+            <a href="#" class="qlink">Wealth Declaration</a>
+            <a href="#" class="qlink">Get Old Appraisal</a>
+            <a href="#" class="qlink">TSC Promotions</a>
+            <a href="#" class="qlink">Apply Sick leave</a>
+            <a href="#" class="qlink">Recruitment</a>
+          </div>
+        </div>
+
+        <!-- NSSF/SHA -->
+        <div class="rounded-2xl border shadow-sm p-5">
+          <h4 class="font-bold text-primary-700">NSSF / SHA Services</h4>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <a href="#" class="qlink">New NSSF Registration</a>
+            <a href="#" class="qlink">Lost NSSF Card</a>
+            <a href="#" class="qlink">New SHA Registration</a>
+            <a href="#" class="qlink">Change SHA phone No.</a>
+            <a href="#" class="qlink">New SHIF Registration</a>
+            <a href="#" class="qlink">Lost SHIF Card</a>
+            <a href="#" class="qlink">Add Dependants</a>
+          </div>
+        </div>
+
+        <!-- HELB / HEF / KUCCPS -->
+        <div class="rounded-2xl border shadow-sm p-5">
+          <h4 class="font-bold text-primary-700">HELB / HEF / KUCCPS</h4>
+          <div class="mt-3 grid grid-cols-2 gap-2 text-sm">
+            <a href="#" class="qlink">HELB Services</a>
+            <a href="#" class="qlink">HEF Services</a>
+            <a href="#" class="qlink">TVET Application</a>
+            <a href="#" class="qlink">Subsequent</a>
+            <a href="#" class="qlink">Troubleshooting</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Similar Websites -->
+      <div class="mt-10 rounded-2xl border shadow-sm p-5">
+        <h4 class="font-bold text-primary-700 mb-3">Other Similar Websites</h4>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
+          <a class="qlink" href="https://www.ecitizen.onlinecyber.co.ke" target="_blank" rel="noopener">ecitizen.onlinecyber.co.ke</a>
+          <a class="qlink" href="https://www.itax.onlinecyber.co.ke" target="_blank" rel="noopener">itax.onlinecyber.co.ke</a>
+          <a class="qlink" href="https://www.afyangu.onlinecyber.co.ke" target="_blank" rel="noopener">afyangu.onlinecyber.co.ke</a>
+          <a class="qlink" href="https://www.sha.onlinecyber.co.ke" target="_blank" rel="noopener">sha.onlinecyber.co.ke</a>
+        </div>
+      </div>
+
+      <!-- Advertise / Rent a page -->
+      <div class="mt-6 bg-primary-50 border rounded-2xl p-5">
+        <h4 class="font-bold">TO ADVERTISE HERE or RENT A PAGE</h4>
+        <p class="text-sm text-slate-600 mt-1">
+          We can create your own temporary page e.g. <span class="font-mono">www.onlinecyber.co.ke/tender</span> for sharing tender documents or any other service.
+        </p>
+        <p class="mt-2 text-sm">
+          Call <a class="font-semibold" href="tel:0780003131">0780003131</a> or email <a class="font-semibold underline" href="mailto:info@onlinecyber.co.ke">info@onlinecyber.co.ke</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-7xl mx-auto px-4 py-10">
+    <div class="rounded-3xl bg-gradient-to-br from-primary-600 to-primary-800 p-8 text-white grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h3 class="text-2xl font-extrabold">Need help right now?</h3>
+        <p class="text-white/90 mt-1">Call us or send a WhatsApp and we’ll get you sorted.</p>
+      </div>
+      <div class="flex gap-3 md:justify-end">
+        <a href="tel:0780003131" class="px-4 py-3 rounded-xl bg-white text-primary-700 font-semibold"><i class="fa-solid fa-phone mr-2"></i>0780003131</a>
+        <a href="contact.html" class="px-4 py-3 rounded-xl border border-white/40 font-semibold">Contact Page</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-200">
+    <div class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+      <div>
+        <div class="text-lg font-extrabold">Valnet<span class="text-primary-400">Tech</span></div>
+        <p class="text-sm text-slate-400 mt-2">Email: <a class="underline" href="mailto:info@onlinecyber.co.ke">info@onlinecyber.co.ke</a> • Phone: <a class="underline" href="tel:0780003131">0780003131</a></p>
+      </div>
+      <div>
+        <h5 class="font-bold">Links</h5>
+        <ul class="mt-2 text-sm space-y-1">
+          <li><a href="shop.html" class="hover:underline">Shop</a></li>
+          <li><a href="dataprotection.html" class="hover:underline">Data Protection</a></li>
+          <li><a href="downloads.html" class="hover:underline">Downloads</a></li>
+          <li><a href="faq.html" class="hover:underline">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-bold">Legal</h5>
+        <p class="text-sm text-slate-400 mt-2">Copyright © <span id="year"></span> - Developed by Valnet Technologies. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Quick link styling helper
+    document.querySelectorAll('.qlink').forEach(a=>{
+      a.classList.add('px-3','py-2','rounded-lg','bg-slate-100','hover:bg-primary-50','hover:text-primary-700','transition');
+    });
+
+    // Simple client-side filter + search
+    const search = document.getElementById('search');
+    const buttons = Array.from(document.querySelectorAll('.filter-btn'));
+    const cards = Array.from(document.querySelectorAll('.card'));
+
+    let activeFilter = 'all';
+    const applyFilter = () => {
+      const term = (search.value || '').toLowerCase();
+      cards.forEach(card => {
+        const inCat = activeFilter === 'all' || card.classList.contains(activeFilter);
+        const hay = card.textContent.toLowerCase();
+        const ok = inCat && (!term || hay.includes(term));
+        card.style.display = ok ? '' : 'none';
+      });
+    };
+
+    buttons.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        buttons.forEach(b=>b.classList.remove('bg-primary-600','text-white'));
+        btn.classList.add('bg-primary-600','text-white');
+        activeFilter = btn.dataset.filter;
+        applyFilter();
+      });
+    });
+    // set default active
+    buttons.find(b=>b.dataset.filter==='all').classList.add('bg-primary-600','text-white');
+
+    search.addEventListener('input', applyFilter);
+  </script>
+</body>
+</html>
